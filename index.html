@@ -232,11 +232,29 @@ body {
   <div class="filter">
     <input type="number" id="age" placeholder="Digite a idade">
     <button onclick="filtrar()">Filtrar</button>
+   <select id="area">
+      <option value="">Todas as áreas</option>
+      <option value="matematica">Matemática</option>
+      <option value="fisica">Ciências</option>
+      <option value="informatica">Humanas</option>
+      <option value="robotica">Tecnologia</option>
+      <option value="linguas">Linguagem</option>
+</select>
   </div>
 
   <div class="grid" id="grid">
 
-    <div class="card" data-min="11" data-max="18">
+   <div class="card" data-min="9" data-max="18" data-area="Tecnologia">
+  <h3>OBICT</h3>
+  <p>Olímpiada Brasileira de Inovação Ciência e Tecnologia</p>
+  <div class="info">
+    📅 Abril 2026<br>
+    🎓 4º EF ao 3º EM<br>
+    🌐 <a href="https://www.obict.com.br" target="_blank" class="external-link">Site</a>
+  </div>
+    
+</div> 
+   <div class="card" data-min="11" data-max="18" data-area="Matemática">
       <h3>OBMEP</h3>
       <p>Olimpíada Brasileira de Matemática</p>
       <div class="info">
@@ -246,7 +264,7 @@ body {
       </div>
     </div>
 
-    <div class="card" data-min="10" data-max="18">
+    <div class="card" data-min="10" data-max="18" data-area="Tecnologia">
       <h3>OBI</h3>
       <p>Olimpíada Brasileira de Informática</p>
       <div class="info">
@@ -256,7 +274,7 @@ body {
       </div>
     </div>
 
-    <div class="card" data-min="10" data-max="18">
+    <div class="card" data-min="10" data-max="18" data-area="Tecnologia">
       <h3>OBR</h3>
       <p>Olimpíada Brasileira de Robótica</p>
       <div class="info">
@@ -266,7 +284,7 @@ body {
       </div>
     </div>
 
-    <div class="card" data-min="14" data-max="18">
+    <div class="card" data-min="14" data-max="18" data-area="Ciências">
       <h3>OBF</h3>
       <p>Olimpíada Brasileira de Física</p>
       <div class="info">
@@ -276,177 +294,167 @@ body {
       </div>
     </div>
 
-    <div class="card" data-min="11" data-max="18">
+    <div class="card" data-min="11" data-max="18" data-area="Ciências">
       <h3>ONC</h3>
       <p>Olimpíada Nacional de Ciências</p>
       <div class="info">
         📅 Agosto 2026<br>
         🎓 6º EF ao 3º EM<br>
-        🌐 <a href="https://onciencias.org" target="_blank">Site</a>
+        🌐 <a href="https://onciencias.org" target="_blank" class="external-link">Site</a>
       </div>
     </div>
 
-    <div class="card" data-min="13" data-max="18">
+    <div class="card" data-min="13" data-max="18" data-area="Humanas">
       <h3>ONHB</h3>
       <p>Olimpíada Nacional de História do Brasil</p>
       <div class="info">
         📅 Maio–Junho 2026<br>
         🎓 8º EF ao Médio<br>
-        🌐 <a href="https://www.olimpiadadehistoria.com.br" target="_blank">Site</a>
+        🌐 <a href="https://www.olimpiadadehistoria.com.br" target="_blank" class="external-link">Site</a>
       </div>
     </div>
 
-   <div class="card" data-min="11" data-max="18">
-  <h3>Smeta Ciências</h3>
-  <p>Olimpíada Internacional de Ciências</p>
-  <div class="info">
-    📅 Fev/Mar 2026<br>
-    🎓 Fundamental II ao Médio<br>
-    🌐 <a href="https://smeta.com.br" target="_blank">Site</a>
-  </div>
-</div>
-
-<div class="card" data-min="8" data-max="18">
+<div class="card" data-min="8" data-max="18" data-area="Matemática">
   <h3>Canguru</h3>
   <p>Canguru de Matemática Brasil</p>
   <div class="info">
     📅 19/03/2026<br>
     🎓 3º EF ao 3º EM<br>
-    🌐 <a href="https://www.cangurudematematicabrasil.com.br" target="_blank">Site</a>
+    🌐 <a href="https://www.cangurudematematicabrasil.com.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="9" data-max="18">
+<div class="card" data-min="9" data-max="18" data-area="Matemática">
   <h3>Mat. Sem Fronteiras (Reg)</h3>
   <p>Matemática Sem Fronteiras - Regional</p>
   <div class="info">
     📅 Maio 2026<br>
     🎓 4º EF ao 3º EM<br>
-    🌐 <a href="https://www.matematicasemfronteiras.org" target="_blank">Site</a>
+    🌐 <a href="https://www.matematicasemfronteiras.org" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="9" data-max="18">
+<div class="card" data-min="9" data-max="18" data-area="Matemática">
   <h3>Mat. Sem Fronteiras (Nac)</h3>
   <p>Matemática Sem Fronteiras - Nacional</p>
   <div class="info">
     📅 Junho 2026<br>
     🎓 4º EF ao 3º EM<br>
-    🌐 <a href="https://www.matematicasemfronteiras.org" target="_blank">Site</a>
+    🌐 <a href="https://www.matematicasemfronteiras.org" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="15">
+<div class="card" data-min="11" data-max="15" data-area="Ciências">
   <h3>OBFJr</h3>
   <p>Olimpíada Brasileira de Física Júnior</p>
   <div class="info">
     📅 Outubro 2026<br>
     🎓 6º ao 9º EF<br>
-    🌐 <a href="http://www.obfjr.org.br" target="_blank">Site</a>
+    🌐 <a href="http://www.obfjr.org.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="8" data-max="18">
+<div class="card" data-min="8" data-max="18" data-area="Matemática">
   <h3>Sasmo</h3>
   <p>Singapore and Asian Math Olympiad</p>
   <div class="info">
     📅 Abril 2026<br>
     🎓 2º EF ao 3º EM<br>
-    🌐 <a href="https://sasmo.sg" target="_blank">Site</a>
+    🌐 <a href="https://sasmo.sg" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="8" data-max="18">
+<div class="card" data-min="8" data-max="18" data-area="Matemática">
   <h3>Copernicus Mat.</h3>
   <p>Copernicus Olympiad Mathematics</p>
   <div class="info">
     📅 Jan 2026 (Global)<br>
     🎓 3º EF ao 3º EM<br>
-    🌐 <a href="https://copernicusolympiad.us" target="_blank">Site</a>
+    🌐 <a href="https://copernicusolympiad.us" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Ciências">
   <h3>Copernicus Ciências</h3>
   <p>Copernicus Olympiad Science</p>
   <div class="info">
     📅 Nov 2025/2026<br>
     🎓 5º EF ao 3º EM<br>
-    🌐 <a href="https://copernicusolympiad.us" target="_blank">Site</a>
+    🌐 <a href="https://copernicusolympiad.us" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="6" data-max="18">
+<div class="card" data-min="6" data-max="18" data-area="Ciências">
   <h3>OBA</h3>
   <p>Olimpíada Bras. Astronomia e Astronáutica</p>
   <div class="info">
     📅 15/05/2026<br>
     🎓 Todos os níveis<br>
-    🌐 <a href="http://www.oba.org.br" target="_blank">Site</a>
+    🌐 <a href="http://www.oba.org.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Matemática">
   <h3>GJMat</h3>
   <p>Global Junior Math Olympiad</p>
   <div class="info">
     📅 Dezembro 2025/2026<br>
     🎓 Fundamental ao Médio<br>
-    🌐 <a href="https://gjmat.org" target="_blank">Site</a>
+    🌐 <a href="https://gjmat.org" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Matemática">
   <h3>Singapura 2025</h3>
   <p>SIMOC - Singapore Math Challenge</p>
   <div class="info">
     📅 Julho 2025<br>
     🎓 Alunos Qualificados<br>
-    🌐 <a href="https://simoc.sg" target="_blank">Site</a>
+    🌐 <a href="https://simoc.sg" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Matemática">
   <h3>SMGF</h3>
   <p>Singapore Math Global Final</p>
   <div class="info">
     📅 Agosto 2025<br>
     🎓 Alunos Qualificados<br>
-    🌐 <a href="https://smo-testing.com" target="_blank">Site</a>
+    🌐 <a href="https://smo-testing.com" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Linguagem">
   <h3>OBLI</h3>
   <p>Olimpíada Brasileira de Língua Inglesa</p>
   <div class="info">
     📅 Outubro 2025/2026<br>
     🎓 Fundamental ao Médio<br>
-    🌐 <a href="https://obli.com.br" target="_blank">Site</a>
+    🌐 <a href="https://obli.com.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18">
+<div class="card" data-min="14" data-max="18" data-area="Ciências">
   <h3>TN Biologia</h3>
   <p>Torneio Nacional de Biologia</p>
   <div class="info">
     📅 Agosto 2026<br>
     🎓 Ensino Médio<br>
-    🌐 <a href="https://www.seletaeducacao.com.br/tnbio" target="_blank">Site</a>
+    🌐 <a href="https://www.seletaeducacao.com.br/tnbio" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Ciências">
   <h3>TN Astronomia</h3>
   <p>Torneio Nacional de Astronomia</p>
   <div class="info">
     📅 Setembro 2026<br>
     🎓 Fundamental ao Médio<br>
-    🌐 <a href="hhttps://www.seletaeducacao.com.br/tna" target="_blank">Site</a>
+    🌐 <a href="https://www.seletaeducacao.com.br/tna" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Ciências">
   <h3>ONC</h3>
   <p>Olimpíada Nacional de Ciências</p>
   <div class="info">
@@ -456,7 +464,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Ciências">
   <h3>TB Ciências</h3>
   <p>Torneio Brasileiro de Ciências</p>
   <div class="info">
@@ -466,133 +474,133 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18">
+<div class="card" data-min="14" data-max="18" data-area="Ciências">
   <h3>Olimp. Virtual Física</h3>
   <p>Olimpíada Virtual de Física</p>
   <div class="info">
     📅 Setembro 2026<br>
     🎓 9º EF ao Médio<br>
-    🌐 <a href="https://ovf.org.br" target="_blank">Site</a>
+    🌐 <a href="https://ovf.org.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Ciências">
   <h3>Oceano</h3>
   <p>Olimpíada Brasileira do Oceano</p>
   <div class="info">
     📅 Outubro 2026<br>
     🎓 Todos os níveis<br>
-    🌐 <a href="https://olimpiadaoceano.ib.usp.br" target="_blank">Site</a>
+    🌐 <a href="https://olimpiadaoceano.ib.usp.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="15">
+<div class="card" data-min="11" data-max="15" data-area="Ciências">
   <h3>OBQJr</h3>
   <p>Olimpíada Brasileira de Química Júnior</p>
   <div class="info">
     📅 Agosto 2026<br>
     🎓 6º ao 9º EF<br>
-    🌐 <a href="https://obquimica.org" target="_blank">Site</a>
+    🌐 <a href="https://obquimica.org" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Matemática">
   <h3>OPM</h3>
   <p>Olimpíada Paulista de Matemática</p>
   <div class="info">
     📅 22/08/2026<br>
     🎓 6º EF ao 3º EM<br>
-    🌐 <a href="http://www.opm.mat.br" target="_blank">Site</a>
+    🌐 <a href="http://www.opm.mat.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Matemática">
   <h3>OBM</h3>
   <p>Olimpíada Brasileira de Matemática</p>
   <div class="info">
     📅 08/10/2026<br>
     🎓 6º EF ao Universitário<br>
-    🌐 <a href="https://www.obm.org.br" target="_blank">Site</a>
+    🌐 <a href="https://www.obm.org.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="6" data-max="18">
+<div class="card" data-min="6" data-max="18" data-area="Tecnologia">
   <h3>Desafio BeBras</h3>
   <p>Bebras Brasil - Pensamento Computacional</p>
   <div class="info">
     📅 Novembro 2025/2026<br>
     🎓 1º EF ao 3º EM<br>
-    🌐 <a href="https://bebrasbrasil.org.br" target="_blank">Site</a>
+    🌐 <a href="https://bebrasbrasil.org.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="8" data-max="18">
+<div class="card" data-min="8" data-max="18" data-area="Matemática">
   <h3>TIMO</h3>
   <p>Thailand International Math Olympiad</p>
   <div class="info">
     📅 Outubro 2025/2026<br>
     🎓 J-K ao 3º EM<br>
-    🌐 <a href="https://timo.org.hk" target="_blank">Site</a>
+    🌐 <a href="https://timo.org.hk" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Ciências">
   <h3>O2 Internacional</h3>
   <p>O2 International Science Olympiad</p>
   <div class="info">
     📅 Maio 2026<br>
     🎓 Fundamental ao Médio<br>
-    🌐 <a href="https://o2olympiad.com" target="_blank">Site</a>
+    🌐 <a href="https://o2olympiad.com" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18">
+<div class="card" data-min="14" data-max="18" data-area="Matemática">
   <h3>Prisma</h3>
   <p>Olimpíada de Matemática Prisma</p>
   <div class="info">
     📅 Setembro 2026<br>
     🎓 Ensino Médio<br>
-    🌐 <a href="https://olimpiadaprisma.com.br" target="_blank">Site</a>
+    🌐 <a href="https://olimpiadaprisma.com.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18">
+<div class="card" data-min="14" data-max="18" data-area="Tecnologia">
   <h3>OIA</h3>
   <p>Olimpíada de Inteligência Artificial</p>
   <div class="info">
     📅 Novembro 2026<br>
     🎓 9º EF ao Médio<br>
-    🌐 <a href="https://oia.org.br" target="_blank">Site</a>
+    🌐 <a href="https://oia.org.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="8" data-max="18">
+<div class="card" data-min="8" data-max="18" data-area="Matemática">
   <h3>AMO</h3>
   <p>American Mathematics Olympiad</p>
   <div class="info">
     📅 Outubro 2025/2026<br>
     🎓 2º EF ao 12º ano<br>
-    🌐 <a href="https://amo.sg" target="_blank">Site</a>
+    🌐 <a href="https://amo.sg" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18">
+<div class="card" data-min="11" data-max="18" data-area="Ciências">
   <h3>TNC - EOBA</h3>
   <p>Torneio Nac. Ciências - EOBA</p>
   <div class="info">
     📅 Junho 2026<br>
     🎓 Fundamental ao Médio<br>
-    🌐 <a href="https://torneionacional.com.br" target="_blank">Site</a>
+    🌐 <a href="https://torneionacional.com.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18">
+<div class="card" data-min="14" data-max="18" data-area="Ciências">
   <h3>OBESG</h3>
   <p>Olimpíada Brasileira de ESG</p>
   <div class="info">
     📅 Outubro 2026<br>
     🎓 9º EF ao Médio<br>
-    🌐 <a href="https://obesg.org.br" target="_blank">Site</a>
+    🌐 <a href="https://obesg.org.br" target="_blank" class="external-link">Site</a>
   </div>
 </div>
 
@@ -612,20 +620,45 @@ body {
 
 <script>
 function filtrar() {
-  const idade = document.getElementById("age").value;
+  const idade = Number(document.getElementById("age").value);
+  const area = document.getElementById("area").value;
   const cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
-    const min = card.getAttribute("data-min");
-    const max = card.getAttribute("data-max");
+    const min = Number(card.getAttribute("data-min"));
+    const max = Number(card.getAttribute("data-max"));
+    const areaCard = card.getAttribute("data-area");
 
-    if (!idade || (idade >= min && idade <= max)) {
+    const idadeOk = !idade || (idade >= min && idade <= max);
+    const areaOk = !area || area === areaCard;
+
+    if (idadeOk && areaOk) {
       card.style.display = "block";
     } else {
       card.style.display = "none";
     }
   });
 }
+</script>
+
+ <script>
+document.querySelectorAll(".external-link").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const url = this.href;
+
+    const confirmacao = confirm(
+      "Você está saindo do OlimpManager App para acessar um site externo. Deseja continuar?"
+    );
+
+    if (confirmacao) {
+      window.open(url, "_blank");
+    }
+  });
+});
+</script>
+ 
 </script>
 
 </body>
