@@ -6,17 +6,19 @@
 <title>OlimpManager App</title>
 
 <style>
+/* Força o carregamento do CSS no GitHub Pages */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
-  background: #e5e7eb;
+  background-color: #e5e7eb !important;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
-  background: linear-gradient(135deg, #0f172a, #2563eb);
-  color: white;
-  padding: 50px 20px;
+  background: #0f172a;
+  background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%) !important;
+  color: white !important;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -24,42 +26,334 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Reduzi um pouco o espaço para caber melhor */
+  gap: 30px; /* Aumentei o espaço para acomodar as imagens maiores */
+  margin-bottom: 20px;
 }
 
 .kid-img {
-  width: 80px; /* Reduzi o tamanho para ficar proporcional ao título */
-  height: 80px;
-  border-radius: 50%; /* Deixei circular para um visual mais moderno, mas pode mudar para 10px se preferir quadrado */
+  width: 140px; /* Aumentei o tamanho conforme solicitado */
+  height: 170px; /* Mantive a proporção retangular original */
+  border-radius: 10px; /* Removi o redondo (50%) e deixei apenas um leve arredondamento nos cantos */
   object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.3);
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  background: white;
 }
 
-/* TÍTULO */
 .hero h1 {
-  font-size: 32px;
+  font-size: 36px;
   margin: 0;
-  white-space: nowrap; /* Evita que o título quebre linha entre as fotos */
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero p {
   max-width: 600px;
-  margin: 20px auto 0;
-  opacity: 0.9;
-  font-size: 16px;
+  margin: 10px auto 30px;
+  opacity: 0.95;
+  font-size: 18px;
 }
 
 .mvp {
-  margin: 30px auto;
+  margin: 40px auto;
   max-width: 800px;
-  line-height: 1.6;
-  font-size: 14px;
+  line-height: 1.7;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .cta {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
+.cta input {
+  padding: 14px;
+  width: 280px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.cta button {
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  background: #16a34a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.cta button:hover {
+  background: #15803d;
+}
+
+.lgpd {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 15px;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  max-width: 1100px;
+  margin: -40px auto 40px;
+  background: #ffffff !important;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* FILTRO */
+.filter {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.filter input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  width: 200px;
+  font-size: 16px;
+}
+
+.filter button {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* GRID DE CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: #1e293b;
+}
+
+.card p {
+  margin: 0;
+  font-size: 15px;
+  color: #64748b;
+}
+
+.info {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.info a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* RODAPÉ / EMAIL */
+.email-box {
+  margin-top: 50px;
+  text-align: center;
+  padding: 40px;
+  background: #f8fafc;
+  border-radius: 20px;
+}
+
+.email-box h3 {
+  margin-bottom: 20px;
+}
+
+.email-box input {
+  padding: 12px;
+  width: 280px;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+}
+
+.email-box button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #16a34a;
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+  <div class="hero-content">
+    <img src="Caio.png" class="kid-img" alt="Caio">
+    <h1>🚀 OlimpManager App</h1>
+    <img src="Clara.png" class="kid-img" alt="Clara">
+  </div>
+
+  <p>Descubra as melhores olimpíadas científicas para você!</p>
+
+  <div class="mvp">
+    🚀 Você está acessando este site na sua versão experimental, antes do lançamento oficial do nosso Aplicativo.<br><br>
+    O <b>OlimpManager App</b> nasceu da iniciativa dos irmãos Caio e Clara, dois apaixonados pela busca de conhecimento e pelo desejo de tornar mais acessíveis e organizadas as oportunidades de olimpíadas científicas.<br><br>
+    Este é ainda um protótipo — estamos construindo algo muito maior para vocês.<br><br>
+    📈 Em breve: recomendações inteligentes e trilhas personalizadas. Insira seu e-mail para receber novidades em breve!
+  </div>
+
+  <div class="cta">
+    <form action="https://formspree.io/f/xlgodlql" method="POST">
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <button type="submit">Quero acompanhar</button>
+    </form>
+    <div class="lgpd">
+      Ao se cadastrar, você concorda em receber comunicações do OlimpManager App.
+      Seus dados não serão compartilhados.
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="filter">
+    <input type="number" id="age" placeholder="Digite a idade">
+    <button onclick="filtrar()">Filtrar</button>
+  </div>
+
+  <div class="grid" id="grid">
+
+    <div class="card" data-min="11" data-max="18">
+      <h3>OBMEP</h3>
+      <p>Olimpíada Brasileira de Matemática</p>
+      <div class="info">
+        📅 04/06/2026<br>
+        🎓 6º EF ao 3º EM<br>
+        🌐 <a href="https://www.obmep.org.br" target="_blank">Site</a>
+      </div>
+    </div>
+
+    <div class="card" data-min="10" data-max="18">
+      <h3>OBI</h3>
+      <p>Olimpíada Brasileira de Informática</p>
+      <div class="info">
+        📅 Maio 2026<br>
+        🎓 Fundamental ao Médio<br>
+        🌐 <a href="https://olimpiada.ic.unicamp.br" target="_blank">Site</a>
+      </div>
+    </div>
+
+    <div class="card" data-min="10" data-max="18">
+      <h3>OBR</h3>
+      <p>Olimpíada Brasileira de Robótica</p>
+      <div class="info">
+        📅 Junho 2026<br>
+        🎓 Fundamental ao Médio<br>
+        🌐 <a href="http://obr.robocup.org.br" target="_blank">Site</a>
+      </div>
+    </div>
+
+    <div class="card" data-min="14" data-max="18">
+      <h3>OBF</h3>
+      <p>Olimpíada Brasileira de Física</p>
+      <div class="info">
+        📅 Agosto 2026<br>
+        🎓 9º EF ao Médio<br>
+        🌐 <a href="http://www.sbfisica.org.br" target="_blank">Site</a>
+      </div>
+    </div>
+
+    <div class="card" data-min="11" data-max="18">
+      <h3>ONC</h3>
+      <p>Olimpíada Nacional de Ciências</p>
+      <div class="info">
+        📅 Agosto 2026<br>
+        🎓 6º EF ao 3º EM<br>
+        🌐 <a href="https://onciencias.org" target="_blank">Site</a>
+      </div>
+    </div>
+
+    <div class="card" data-min="13" data-max="18">
+      <h3>ONHB</h3>
+      <p>Olimpíada Nacional de História do Brasil</p>
+      <div class="info">
+        📅 Maio–Junho 2026<br>
+        🎓 8º EF ao Médio<br>
+        🌐 <a href="https://www.olimpiadadehistoria.com.br" target="_blank">Site</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="email-box">
+    <h3>Receba novidades</h3>
+    <input type="email" placeholder="Seu e-mail">
+    <button>Cadastrar</button>
+
+    <div class="footer-text">
+      Seus dados não serão compartilhados.
+    </div>
+  </div>
+
+</div>
+
+<script>
+function filtrar() {
+  const idade = document.getElementById("age").value;
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const min = card.getAttribute("data-min");
+    const max = card.getAttribute("data-max");
+
+    if (!idade || (idade >= min && idade <= max)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
 .cta input {
   padding: 12px;
   width: 250px;
