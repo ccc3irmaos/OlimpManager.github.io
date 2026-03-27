@@ -16,13 +16,13 @@ body {
 .hero {
   background: linear-gradient(135deg, #0f172a, #2563eb);
   color: white;
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .logo {
-  max-width: 120px;
-  margin-bottom: 20px;
+  max-width: 110px;
+  margin-bottom: 15px;
 }
 
 .hero-content {
@@ -33,8 +33,245 @@ body {
 }
 
 .kid-img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.hero p {
+  font-size: 16px;
+}
+
+.mvp {
+  margin-top: 20px;
+  font-size: 14px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cta {
+  margin-top: 20px;
+}
+
+.cta input {
+  padding: 10px;
+  width: 240px;
+  border-radius: 6px;
+  border: none;
+}
+
+.cta button {
+  padding: 10px 14px;
+  background: #22c55e;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* FILTRO */
+.filter {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filter select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.tag {
+  background: #2563eb;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.meta {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <img src="logo.png" class="logo">
+
+  <div class="hero-content">
+    <img src="filho1.jpg" class="kid-img">
+    <h1>🚀 OlimpManager App</h1>
+    <img src="filho2.jpg" class="kid-img">
+  </div>
+
+  <p>Descubra as melhores olimpíadas científicas por idade</p>
+
+  <div class="mvp">
+    🚀 Você está acessando antes do lançamento oficial.<br><br>
+
+    O <b>OlimpManager App</b> nasceu da iniciativa de jovens estudantes 
+    que queriam organizar melhor as oportunidades de olimpíadas científicas.<br><br>
+
+    Este é um MVP — e estamos construindo algo muito maior.<br><br>
+
+    📈 Em breve: recomendações inteligentes e trilhas personalizadas.
+  </div>
+
+  <div class="cta">
+    <form action="https://formspree.io/f/SEU_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <button type="submit">Quero acompanhar</button>
+      <input type="text" name="_gotcha" style="display:none">
+    </form>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- FILTRO -->
+<div class="filter">
+  <select id="ageFilter" onchange="filterCards()">
+    <option value="all">Todas as idades</option>
+    <option value="6-9">6 a 9 anos</option>
+    <option value="10-12">10 a 12 anos</option>
+    <option value="13-15">13 a 15 anos</option>
+    <option value="16+">16+ anos</option>
+  </select>
+</div>
+
+<div class="grid" id="grid">
+
+<!-- CARDS -->
+
+<div class="card" data-age="10-12">
+  <span class="tag">Matemática</span>
+  <div class="title">OBMEP</div>
+  <div class="meta">
+    Idade: 10+<br>
+    Prova: 09 Jun 2026<br>
+    2ª fase: 17 Out 2026
+  </div>
+</div>
+
+<div class="card" data-age="10-12">
+  <span class="tag">Química</span>
+  <div class="title">OBQ Jr</div>
+  <div class="meta">
+    Idade: 11+<br>
+    Prova: Junho 2026 (previsto)
+  </div>
+</div>
+
+<div class="card" data-age="10-12">
+  <span class="tag">Matemática</span>
+  <div class="title">SASMO</div>
+  <div class="meta">
+    Idade: 8+<br>
+    Prova: Abril 2026
+  </div>
+</div>
+
+<div class="card" data-age="13-15">
+  <span class="tag">Ciências</span>
+  <div class="title">ONC</div>
+  <div class="meta">
+    Idade: 12+<br>
+    Fase 1: Agosto 2026<br>
+    Fase 2: Setembro 2026
+  </div>
+</div>
+
+<div class="card" data-age="13-15">
+  <span class="tag">Tecnologia</span>
+  <div class="title">OBI</div>
+  <div class="meta">
+    Idade: 12+<br>
+    Fase 1: Maio/Junho<br>
+    Final: Setembro
+  </div>
+</div>
+
+<div class="card" data-age="13-15">
+  <span class="tag">Matemática</span>
+  <div class="title">GJMAT</div>
+  <div class="meta">
+    Idade: 12+<br>
+    Prova: Setembro 2026
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+  © 2026 OlimpManager App • MVP em evolução 🚀
+</div>
+
+<script>
+function filterCards() {
+  let selected = document.getElementById("ageFilter").value;
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    let age = card.getAttribute("data-age");
+
+    if (selected === "all" || age === selected) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid white;
