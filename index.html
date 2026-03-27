@@ -12,7 +12,7 @@ body {
   background: #e5e7eb;
 }
 
-* HERO */
+/* HERO */
 .hero {
   background: linear-gradient(135deg, #0f172a, #2563eb);
   color: white;
@@ -24,27 +24,64 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px; /* Reduzi um pouco o espaço para caber melhor */
 }
 
 .kid-img {
-  width: 140px;
-  height: 170px;
-  border-radius: 10px;
+  width: 80px; /* Reduzi o tamanho para ficar proporcional ao título */
+  height: 80px;
+  border-radius: 50%; /* Deixei circular para um visual mais moderno, mas pode mudar para 10px se preferir quadrado */
   object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 /* TÍTULO */
 .hero h1 {
-  font-size: 30px;
-  margin: 10px 0;
+  font-size: 32px;
+  margin: 0;
+  white-space: nowrap; /* Evita que o título quebre linha entre as fotos */
 }
 
 .hero p {
   max-width: 600px;
-  margin: auto;
+  margin: 20px auto 0;
   opacity: 0.9;
+  font-size: 16px;
+}
+
+.mvp {
+  margin: 30px auto;
+  max-width: 800px;
+  line-height: 1.6;
   font-size: 14px;
+}
+
+.cta {
+  margin-top: 20px;
+}
+
+.cta input {
+  padding: 12px;
+  width: 250px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.cta button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background: #16a34a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lgpd {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: 10px;
 }
 
 /* CONTAINER */
@@ -54,6 +91,7 @@ body {
   background: #f9fafb;
   padding: 25px;
   border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* FILTRO */
@@ -118,8 +156,11 @@ body {
 
 /* EMAIL */
 .email-box {
-  margin-top: 30px;
+  margin-top: 40px;
   text-align: center;
+  padding: 30px;
+  background: #f3f4f6;
+  border-radius: 14px;
 }
 
 .email-box input {
@@ -153,9 +194,9 @@ body {
 <div class="hero">
 
   <div class="hero-content">
-    <img src="Caio.png" class="kid-img">
+    <img src="Caio.png" class="kid-img" alt="Caio">
     <h1>🚀 OlimpManager App</h1>
-    <img src="Clara.png" class="kid-img">
+    <img src="Clara.png" class="kid-img" alt="Clara">
   </div>
 
   <p>Descubra as melhores olimpíadas científicas para você!</p>
