@@ -6,7 +6,7 @@
 <title>OlimpManager App</title>
 
 <style>
-/* Força o carregamento do CSS no GitHub Pages */
+/* Base */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
@@ -18,7 +18,7 @@ body {
   background: #0f172a;
   background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%) !important;
   color: white !important;
-  padding: 60px 20px;
+  padding: 40px 20px; /* Reduzi um pouco o padding para mobile */
   text-align: center;
 }
 
@@ -26,25 +26,53 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   margin-bottom: 20px;
+  flex-wrap: wrap; /* Permite quebrar linha se não couber */
 }
 
 .kid-img {
-  width: 140px; /* Tamanho ampliado */
-  height: auto; /* Deixei automático para manter a proporção da imagem sem fundo */
+  width: 140px; 
+  height: auto;
   max-height: 180px;
-  object-fit: contain; /* Garante que a imagem transparente não seja cortada */
-  border: none; /* REMOVIDO: Borda retirada para transparência */
-  background: transparent !important; /* REMOVIDO: Fundo branco retirado */
-  border-radius: 0; /* REMOVIDO: Sem arredondamento */
+  object-fit: contain;
+  background: transparent !important;
+  border: none;
 }
 
 .hero h1 {
   font-size: 36px;
-  margin: 0;
+  margin: 10px 0;
   color: white;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* AJUSTES PARA CELULAR (Telas menores que 600px) */
+@media (max-width: 600px) {
+  .hero {
+    padding: 30px 15px;
+  }
+  
+  .hero-content {
+    flex-direction: row; /* Mantém lado a lado se possível, ou muda para column se preferir */
+    gap: 10px;
+  }
+
+  .kid-img {
+    width: 80px; /* Reduz o tamanho no celular para caber tudo */
+    max-height: 100px;
+  }
+
+  .hero h1 {
+    font-size: 24px; /* Diminui o título no celular */
+    width: 100%; /* Força o título a ocupar sua própria linha se as fotos forem prioridade */
+    order: -1; /* Coloca o título no topo se quiser, ou remova para manter no meio */
+  }
+  
+  /* Se preferir as fotos acima do título no celular, use column:
+  .hero-content { flex-direction: column; }
+  .hero h1 { order: 2; }
+  */
 }
 
 .hero p {
@@ -54,23 +82,28 @@ body {
   font-size: 18px;
 }
 
+@media (max-width: 600px) {
+  .hero p { font-size: 15px; }
+}
+
 .mvp {
-  margin: 40px auto;
+  margin: 30px auto;
   max-width: 800px;
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 15px;
   background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
+  padding: 15px;
   border-radius: 12px;
 }
 
 .cta {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .cta input {
-  padding: 14px;
-  width: 280px;
+  padding: 12px;
+  width: 90%; /* Ocupa quase toda a largura no mobile */
+  max-width: 280px;
   border-radius: 8px;
   border: none;
   margin-bottom: 10px;
@@ -78,7 +111,7 @@ body {
 }
 
 .cta button {
-  padding: 14px 28px;
+  padding: 12px 24px;
   border-radius: 8px;
   border: none;
   background: #16a34a;
@@ -86,27 +119,16 @@ body {
   font-weight: bold;
   cursor: pointer;
   font-size: 16px;
-  transition: background 0.3s;
-}
-
-.cta button:hover {
-  background: #15803d;
-}
-
-.lgpd {
-  font-size: 12px;
-  opacity: 0.8;
-  margin-top: 15px;
 }
 
 /* CONTAINER PRINCIPAL */
 .container {
   max-width: 1100px;
-  margin: -40px auto 40px;
+  margin: -30px auto 30px;
   background: #ffffff !important;
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   position: relative;
   z-index: 10;
 }
@@ -114,91 +136,51 @@ body {
 /* FILTRO */
 .filter {
   display: flex;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .filter input {
-  padding: 12px;
+  padding: 10px;
   border-radius: 10px;
   border: 2px solid #e5e7eb;
-  width: 200px;
-  font-size: 16px;
-}
-
-.filter button {
-  padding: 12px 25px;
-  border-radius: 10px;
-  border: none;
-  background: #2563eb;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
 }
 
 /* GRID DE CARDS */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 22px;
+  padding: 20px;
   border-radius: 16px;
   border: 1px solid #f3f4f6;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-  transition: transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  margin: 0 0 8px;
-  color: #1e293b;
-}
-
-.card p {
-  margin: 0;
-  font-size: 15px;
-  color: #64748b;
-}
-
-.info {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #475569;
-  line-height: 1.6;
-}
-
-.info a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* RODAPÉ / EMAIL */
+/* EMAIL BOX */
 .email-box {
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
-  padding: 40px;
+  padding: 30px 15px;
   background: #f8fafc;
   border-radius: 20px;
 }
 
-.email-box h3 {
-  margin-bottom: 20px;
-}
-
 .email-box input {
   padding: 12px;
-  width: 280px;
+  width: 90%;
+  max-width: 250px;
   border-radius: 10px;
   border: 2px solid #e2e8f0;
+  margin-bottom: 10px;
 }
 
 .email-box button {
@@ -208,14 +190,7 @@ body {
   background: #16a34a;
   color: white;
   font-weight: bold;
-  margin-left: 10px;
   cursor: pointer;
-}
-
-.footer-text {
-  font-size: 13px;
-  color: #94a3b8;
-  margin-top: 15px;
 }
 </style>
 
