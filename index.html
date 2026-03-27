@@ -206,19 +206,19 @@ body {
     <img src="Clara.png" class="kid-img" alt="Clara">
   </div>
 
-  <p>Te AJUDO a ENCONTRAR e SELECIONAR as melhores olimpíadas científicas para você!</p>
+  <p>Te AJUDO a ENCONTRAR e SELECIONAR as melhores olimpíadas científicas para você! 🎯 </p>
 
   <div class="mvp">
-    🚀 Você está acessando este site na sua versão experimental, antes do lançamento oficial do nosso Aplicativo que estará disponível para o seu celular.<br><br>
+    🚀 Você está acessando a versão inicial do OlimpManager App.<br><br>
     O <b>OlimpManager App</b> nasceu da iniciativa dos irmãos Caio e Clara, dois apaixonados pela busca de conhecimento e pelo desejo de tornar mais acessíveis e organizadas as oportunidades de olimpíadas científicas.<br><br>
     Este é ainda um protótipo — estamos construindo algo muito maior para vocês.<br><br>
-    📈 Em breve: recomendações inteligentes, trilhas personalizadas e MUITOOOOO mais para você. Insira seu e-mail para receber novidades em breve!
+    📈 Em breve: recomendações inteligentes, trilhas personalizadas e MUITOOOOO mais para você. Cadastre seu e-mail para receber novidades em breve!
   </div>
 
   <div class="cta">
     <form action="https://formspree.io/f/xlgodlql" method="POST">
       <input type="email" name="email" placeholder="Seu e-mail" required>
-      <button type="submit">Quero acompanhar</button>
+      <button type="submit">Quero receber novidades!</button>
     </form>
     <div class="lgpd">
       Ao se cadastrar, você concorda em receber comunicações do OlimpManager App.
@@ -235,16 +235,20 @@ body {
    <select id="area">
       <option value="">Todas as áreas</option>
       <option value="matematica">Matemática</option>
-      <option value="fisica">Ciências</option>
-      <option value="informatica">Humanas</option>
-      <option value="robotica">Tecnologia</option>
+      <option value="ciencias">Ciências</option>
+      <option value="humanas">Humanas</option>
+      <option value="tecnologia">Tecnologia</option>
       <option value="linguas">Linguagem</option>
 </select>
+   <button onclick="filtrar()">Filtrar</button>
+
+  <button onclick="limparFiltros()">Limpar</button>
+   
   </div>
 
   <div class="grid" id="grid">
 
-   <div class="card" data-min="9" data-max="18" data-area="Tecnologia">
+   <div class="card" data-min="9" data-max="18" data-area="tecnologia">
   <h3>OBICT</h3>
   <p>Olímpiada Brasileira de Inovação Ciência e Tecnologia</p>
   <div class="info">
@@ -254,47 +258,47 @@ body {
   </div>
     
 </div> 
-   <div class="card" data-min="11" data-max="18" data-area="Matemática">
+   <div class="card" data-min="11" data-max="18" data-area="matematica">
       <h3>OBMEP</h3>
       <p>Olimpíada Brasileira de Matemática</p>
       <div class="info">
         📅 04/06/2026<br>
         🎓 6º EF ao 3º EM<br>
-        🌐 <a href="https://www.obmep.org.br" target="_blank">Site</a>
+        🌐 <a href="https://www.obmep.org.br" target="_blank" class="external-link">Site</a>
       </div>
     </div>
 
-    <div class="card" data-min="10" data-max="18" data-area="Tecnologia">
+    <div class="card" data-min="10" data-max="18" data-area="tecnologia">
       <h3>OBI</h3>
       <p>Olimpíada Brasileira de Informática</p>
       <div class="info">
         📅 Maio 2026<br>
         🎓 Fundamental ao Médio<br>
-        🌐 <a href="https://olimpiada.ic.unicamp.br" target="_blank">Site</a>
+        🌐 <a href="https://olimpiada.ic.unicamp.br" target="_blank" class="external-link">Site</a>
       </div>
     </div>
 
-    <div class="card" data-min="10" data-max="18" data-area="Tecnologia">
+    <div class="card" data-min="10" data-max="18" data-area="tecnologia">
       <h3>OBR</h3>
       <p>Olimpíada Brasileira de Robótica</p>
       <div class="info">
         📅 Junho 2026<br>
         🎓 Fundamental ao Médio<br>
-        🌐 <a href="http://obr.robocup.org.br" target="_blank">Site</a>
+        🌐 <a href="http://obr.robocup.org.br" target="_blank" class="external-link">Site</a>
       </div>
     </div>
 
-    <div class="card" data-min="14" data-max="18" data-area="Ciências">
+    <div class="card" data-min="14" data-max="18" data-area="ciencias">
       <h3>OBF</h3>
       <p>Olimpíada Brasileira de Física</p>
       <div class="info">
         📅 Agosto 2026<br>
         🎓 9º EF ao Médio<br>
-        🌐 <a href="http://www.sbfisica.org.br" target="_blank">Site</a>
+        🌐 <a href="http://www.sbfisica.org.br" target="_blank" class="external-link">Site</a>
       </div>
     </div>
 
-    <div class="card" data-min="11" data-max="18" data-area="Ciências">
+    <div class="card" data-min="11" data-max="18" data-area="ciencias">
       <h3>ONC</h3>
       <p>Olimpíada Nacional de Ciências</p>
       <div class="info">
@@ -304,7 +308,7 @@ body {
       </div>
     </div>
 
-    <div class="card" data-min="13" data-max="18" data-area="Humanas">
+    <div class="card" data-min="13" data-max="18" data-area="humanas">
       <h3>ONHB</h3>
       <p>Olimpíada Nacional de História do Brasil</p>
       <div class="info">
@@ -314,7 +318,7 @@ body {
       </div>
     </div>
 
-<div class="card" data-min="8" data-max="18" data-area="Matemática">
+<div class="card" data-min="8" data-max="18" data-area="matematica">
   <h3>Canguru</h3>
   <p>Canguru de Matemática Brasil</p>
   <div class="info">
@@ -324,7 +328,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="9" data-max="18" data-area="Matemática">
+<div class="card" data-min="9" data-max="18" data-area="matematica">
   <h3>Mat. Sem Fronteiras (Reg)</h3>
   <p>Matemática Sem Fronteiras - Regional</p>
   <div class="info">
@@ -334,7 +338,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="9" data-max="18" data-area="Matemática">
+<div class="card" data-min="9" data-max="18" data-area="matematica">
   <h3>Mat. Sem Fronteiras (Nac)</h3>
   <p>Matemática Sem Fronteiras - Nacional</p>
   <div class="info">
@@ -344,7 +348,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="15" data-area="Ciências">
+<div class="card" data-min="11" data-max="15" data-area="ciencias">
   <h3>OBFJr</h3>
   <p>Olimpíada Brasileira de Física Júnior</p>
   <div class="info">
@@ -354,7 +358,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="8" data-max="18" data-area="Matemática">
+<div class="card" data-min="8" data-max="18" data-area="matematica">
   <h3>Sasmo</h3>
   <p>Singapore and Asian Math Olympiad</p>
   <div class="info">
@@ -364,7 +368,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="8" data-max="18" data-area="Matemática">
+<div class="card" data-min="8" data-max="18" data-area="matematica">
   <h3>Copernicus Mat.</h3>
   <p>Copernicus Olympiad Mathematics</p>
   <div class="info">
@@ -374,7 +378,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Ciências">
+<div class="card" data-min="11" data-max="18" data-area="ciencias">
   <h3>Copernicus Ciências</h3>
   <p>Copernicus Olympiad Science</p>
   <div class="info">
@@ -384,7 +388,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="6" data-max="18" data-area="Ciências">
+<div class="card" data-min="6" data-max="18" data-area="ciencias">
   <h3>OBA</h3>
   <p>Olimpíada Bras. Astronomia e Astronáutica</p>
   <div class="info">
@@ -394,7 +398,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Matemática">
+<div class="card" data-min="11" data-max="18" data-area="matematica">
   <h3>GJMat</h3>
   <p>Global Junior Math Olympiad</p>
   <div class="info">
@@ -404,7 +408,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Matemática">
+<div class="card" data-min="11" data-max="18" data-area="matematica">
   <h3>Singapura 2025</h3>
   <p>SIMOC - Singapore Math Challenge</p>
   <div class="info">
@@ -414,7 +418,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Matemática">
+<div class="card" data-min="11" data-max="18" data-area="matematica">
   <h3>SMGF</h3>
   <p>Singapore Math Global Final</p>
   <div class="info">
@@ -424,7 +428,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Linguagem">
+<div class="card" data-min="11" data-max="18" data-area="linguas">
   <h3>OBLI</h3>
   <p>Olimpíada Brasileira de Língua Inglesa</p>
   <div class="info">
@@ -434,7 +438,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18" data-area="Ciências">
+<div class="card" data-min="14" data-max="18" data-area="ciencias">
   <h3>TN Biologia</h3>
   <p>Torneio Nacional de Biologia</p>
   <div class="info">
@@ -444,7 +448,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Ciências">
+<div class="card" data-min="11" data-max="18" data-area="ciencias">
   <h3>TN Astronomia</h3>
   <p>Torneio Nacional de Astronomia</p>
   <div class="info">
@@ -454,7 +458,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Ciências">
+<div class="card" data-min="11" data-max="18" data-area="ciencias">
   <h3>ONC</h3>
   <p>Olimpíada Nacional de Ciências</p>
   <div class="info">
@@ -474,7 +478,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18" data-area="Ciências">
+<div class="card" data-min="14" data-max="18" data-area="ciencias">
   <h3>Olimp. Virtual Física</h3>
   <p>Olimpíada Virtual de Física</p>
   <div class="info">
@@ -484,7 +488,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Ciências">
+<div class="card" data-min="11" data-max="18" data-area="ciencias">
   <h3>Oceano</h3>
   <p>Olimpíada Brasileira do Oceano</p>
   <div class="info">
@@ -494,7 +498,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="15" data-area="Ciências">
+<div class="card" data-min="11" data-max="15" data-area="ciencias">
   <h3>OBQJr</h3>
   <p>Olimpíada Brasileira de Química Júnior</p>
   <div class="info">
@@ -504,7 +508,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Matemática">
+<div class="card" data-min="11" data-max="18" data-area="matematica">
   <h3>OPM</h3>
   <p>Olimpíada Paulista de Matemática</p>
   <div class="info">
@@ -514,7 +518,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Matemática">
+<div class="card" data-min="11" data-max="18" data-area="matematica">
   <h3>OBM</h3>
   <p>Olimpíada Brasileira de Matemática</p>
   <div class="info">
@@ -524,7 +528,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="6" data-max="18" data-area="Tecnologia">
+<div class="card" data-min="6" data-max="18" data-area="tecnologia">
   <h3>Desafio BeBras</h3>
   <p>Bebras Brasil - Pensamento Computacional</p>
   <div class="info">
@@ -534,7 +538,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="8" data-max="18" data-area="Matemática">
+<div class="card" data-min="8" data-max="18" data-area="matematica">
   <h3>TIMO</h3>
   <p>Thailand International Math Olympiad</p>
   <div class="info">
@@ -544,7 +548,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Ciências">
+<div class="card" data-min="11" data-max="18" data-area="ciencias">
   <h3>O2 Internacional</h3>
   <p>O2 International Science Olympiad</p>
   <div class="info">
@@ -554,7 +558,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18" data-area="Matemática">
+<div class="card" data-min="14" data-max="18" data-area="matematica">
   <h3>Prisma</h3>
   <p>Olimpíada de Matemática Prisma</p>
   <div class="info">
@@ -564,7 +568,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18" data-area="Tecnologia">
+<div class="card" data-min="14" data-max="18" data-area="tecnologia">
   <h3>OIA</h3>
   <p>Olimpíada de Inteligência Artificial</p>
   <div class="info">
@@ -584,7 +588,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="11" data-max="18" data-area="Ciências">
+<div class="card" data-min="11" data-max="18" data-area="ciencias">
   <h3>TNC - EOBA</h3>
   <p>Torneio Nac. Ciências - EOBA</p>
   <div class="info">
@@ -594,7 +598,7 @@ body {
   </div>
 </div>
 
-<div class="card" data-min="14" data-max="18" data-area="Ciências">
+<div class="card" data-min="14" data-max="18" data-area="ciencias">
   <h3>OBESG</h3>
   <p>Olimpíada Brasileira de ESG</p>
   <div class="info">
@@ -641,6 +645,14 @@ function filtrar() {
 }
 </script>
 
+ <script>
+ function limparFiltros() {
+  document.getElementById("age").value = "";
+  document.getElementById("area").value = "";
+  filtrar();
+}
+</script>
+ 
  <script>
 document.querySelectorAll(".external-link").forEach(link => {
   link.addEventListener("click", function(e) {
