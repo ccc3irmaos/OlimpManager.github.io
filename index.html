@@ -61,6 +61,13 @@ body {
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
+ .lgpd {
+  font-size: 12px; /* diminui a fonte */
+  opacity: 0.8;     /* opcional: deixa um pouco mais discreto */
+  margin-top: 5px;  /* opcional: separa do botão */
+  text-align: center; /* mantém centralizado */
+}
+
 /* AJUSTES PARA CELULAR (Telas menores que 600px) */
 @media (max-width: 600px) {
   .hero {
@@ -175,6 +182,14 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
+ /* Hover para os cards */
+.card:hover {
+  transform: translateY(-3px);                  /* levanta o card levemente */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);      /* sombra mais forte */
+  transition: 0.3s;                             /* animação suave */
+  cursor: pointer;                              /* indica que é clicável */
+}
+
 /* EMAIL BOX */
 .email-box {
   margin-top: 40px;
@@ -242,7 +257,7 @@ body {
 <div class="container">
 
   <div class="filter">
-    <input type="number" id="age" placeholder="Digite a idade">
+    <input type="number" id="age" placeholder="Digite a sua idade">
     <button onclick="filtrar()">Filtrar</button>
    <select id="area">
       <option value="">Todas as áreas</option>
@@ -623,12 +638,12 @@ body {
   </div>
 
   <div class="email-box">
-    <h3>Receba novidades</h3>
+    <h3>Receba novidades e dicas de olimpíadas direto no seu e-mail 🚀</h3>
     <input type="email" placeholder="Seu e-mail">
     <button>Cadastrar</button>
 
     <div class="footer-text">
-      Seus dados não serão compartilhados.
+      Seus dados serão utilizados apenas para enviarmos novidades do OlimpHUB.
     </div>
   </div>
 
