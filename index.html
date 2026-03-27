@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OlimpManager App</title>
+<title>OlimpHub App</title>
 
 <style>
 /* Base */
@@ -20,6 +20,18 @@ body {
   color: white !important;
   padding: 40px 20px; /* Reduzi um pouco o padding para mobile */
   text-align: center;
+}
+
+ .hero-subtitle {
+  font-size: 18px;
+  margin: 5px 0 0;
+  color: #f3f4f6;
+  opacity: 0.9;
+}
+@media (max-width: 600px) {
+  .hero-subtitle {
+    font-size: 14px;
+  }
 }
 
 .hero-content {
@@ -69,10 +81,6 @@ body {
     order: -1; /* Coloca o título no topo se quiser, ou remova para manter no meio */
   }
   
-  /* Se preferir as fotos acima do título no celular, use column:
-  .hero-content { flex-direction: column; }
-  .hero h1 { order: 2; }
-  */
 }
 
 .hero p {
@@ -202,16 +210,17 @@ body {
 
   <div class="hero-content">
     <img src="Caio.png" class="kid-img" alt="Caio">
-    <h1>🚀 OlimpManager App</h1>
+    <h1>🚀 OlimpHub App</h1>
+    <p class="hero-subtitle">Sua central de olimpíadas científicas</p>
     <img src="Clara.png" class="kid-img" alt="Clara">
   </div>
 
   <p>Te AJUDO a ENCONTRAR e SELECIONAR as melhores olimpíadas científicas para você! 🎯 </p>
 
   <div class="mvp">
-    🚀 Você está acessando a versão inicial do OlimpManager App.<br><br>
     O <b>OlimpManager App</b> nasceu da iniciativa dos irmãos Caio e Clara, dois apaixonados pela busca de conhecimento e pelo desejo de tornar mais acessíveis e organizadas as oportunidades de olimpíadas científicas.<br><br>
-    Este é ainda um protótipo — estamos construindo algo muito maior para vocês.<br><br>
+   🚀 Você está acessando a versão inicial do OlimpManager App.<br><br> 
+   Este é ainda um protótipo — estamos construindo algo muito maior para vocês.<br><br>
     📈 Em breve: recomendações inteligentes, trilhas personalizadas e MUITOOOOO mais para você. Cadastre seu e-mail para receber novidades em breve!
   </div>
 
