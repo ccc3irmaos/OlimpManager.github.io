@@ -16,34 +16,36 @@ body {
 .hero {
   background: linear-gradient(135deg, #1e293b, #1d4ed8);
   color: white;
-  padding: 40px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 32px;
+/* IMAGENS (CORRIGIDO) */
+.header-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 10px;
+}
+
+.header-images img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+/* TÍTULO */
+.hero h1 {
+  font-size: 30px;
+  margin: 10px 0;
 }
 
 .hero p {
   max-width: 600px;
   margin: auto;
   opacity: 0.9;
-}
-
-/* FOTOS */
-.header-images {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 15px;
-}
-
-.header-images img {
-  max-height: 140px;
-  width: auto;
-  height: auto;
-  border-radius: 0; /* sem borda arredondada como você pediu */
+  font-size: 14px;
 }
 
 /* CONTAINER */
@@ -177,7 +179,7 @@ body {
     </div>
   </div>
 </div>
-  
+
 <div class="container">
 
   <div class="filter">
@@ -187,18 +189,16 @@ body {
 
   <div class="grid" id="grid">
 
-    <!-- OBMEP -->
     <div class="card" data-min="11" data-max="18">
       <h3>OBMEP</h3>
       <p>Olimpíada Brasileira de Matemática</p>
       <div class="info">
-        📅 1ª fase: 04/06/2026<br>
+        📅 04/06/2026<br>
         🎓 6º EF ao 3º EM<br>
         🌐 <a href="https://www.obmep.org.br" target="_blank">Site</a>
       </div>
     </div>
 
-    <!-- OBI -->
     <div class="card" data-min="10" data-max="18">
       <h3>OBI</h3>
       <p>Olimpíada Brasileira de Informática</p>
@@ -209,7 +209,6 @@ body {
       </div>
     </div>
 
-    <!-- OBR -->
     <div class="card" data-min="10" data-max="18">
       <h3>OBR</h3>
       <p>Olimpíada Brasileira de Robótica</p>
@@ -220,7 +219,6 @@ body {
       </div>
     </div>
 
-    <!-- OBF -->
     <div class="card" data-min="14" data-max="18">
       <h3>OBF</h3>
       <p>Olimpíada Brasileira de Física</p>
@@ -231,7 +229,6 @@ body {
       </div>
     </div>
 
-    <!-- ONC -->
     <div class="card" data-min="11" data-max="18">
       <h3>ONC</h3>
       <p>Olimpíada Nacional de Ciências</p>
@@ -242,10 +239,9 @@ body {
       </div>
     </div>
 
-    <!-- ONHB -->
     <div class="card" data-min="13" data-max="18">
       <h3>ONHB</h3>
-      <p>Olimpíada Nacional em História do Brasil</p>
+      <p>Olimpíada Nacional de História do Brasil</p>
       <div class="info">
         📅 Maio–Junho 2026<br>
         🎓 8º EF ao Médio<br>
