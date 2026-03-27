@@ -6,18 +6,25 @@
 <title>OlimpManager App</title>
 
 <style>
+
+/* ===== BASE ===== */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
   margin: 0;
-  background: #f5f7fb;
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+  color: #1a1a1a;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, #0f172a, #2563eb);
   color: white;
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
+}
+
+.logo {
+  max-width: 110px;
 }
 
 .hero-content {
@@ -28,40 +35,42 @@ body {
 }
 
 .kid-img {
-  width: 140px;
-  height: 170px;
-  border-radius: 10px;
+  width: 160px;
+  height: 190px;
   object-fit: cover;
+  border-radius: 12px;
 }
 
-.logo {
-  max-width: 110px;
+h1 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .mvp {
   max-width: 650px;
-  margin: auto;
-  margin-top: 20px;
+  margin: 20px auto;
   font-size: 14px;
   line-height: 1.6;
 }
 
-.cta {
-  margin-top: 20px;
-}
-
+/* ===== CTA ===== */
 .cta input {
   padding: 10px;
   border-radius: 6px;
   border: none;
 }
 
-.cta button {
-  padding: 10px;
-  background: #22c55e;
+button {
+  background: #111827;
   color: white;
   border: none;
-  border-radius: 6px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1f2937;
 }
 
 .lgpd {
@@ -69,14 +78,14 @@ body {
   margin-top: 10px;
 }
 
-/* CONTAINER */
+/* ===== CONTAINER ===== */
 .container {
   padding: 30px;
   max-width: 1100px;
   margin: auto;
 }
 
-/* FILTRO */
+/* ===== FILTROS ===== */
 .filter {
   text-align: center;
   margin-bottom: 20px;
@@ -86,53 +95,76 @@ body {
   padding: 10px;
   margin: 5px;
   border-radius: 6px;
+  border: 1px solid #ddd;
 }
 
-/* GRID */
+/* ===== GRID ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
+  gap: 18px;
 }
 
+/* ===== CARDS PREMIUM ===== */
 .card {
-  background: white;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
-  transition: 0.2s;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* TAGS */
-.tag { color: white; padding: 4px 8px; border-radius: 6px; font-size: 12px; }
-.matematica { background:#2563eb; }
-.ciencias { background:#16a34a; }
-.tecnologia { background:#7c3aed; }
-.linguagens { background:#ea580c; }
-.humanas { background:#dc2626; }
-.ingles { background:#0ea5e9; }
-.robotica { background:#9333ea; }
+.card h3 {
+  margin: 10px 0 5px;
+}
 
-/* DESTAQUES */
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== TAGS ===== */
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(0,0,0,0.05);
+}
+
+.tag.matematica { border:1px solid #2563eb; color:#2563eb; }
+.tag.ciencias { border:1px solid #16a34a; color:#16a34a; }
+.tag.tecnologia { border:1px solid #7c3aed; color:#7c3aed; }
+.tag.linguagens { border:1px solid #ea580c; color:#ea580c; }
+.tag.humanas { border:1px solid #dc2626; color:#dc2626; }
+.tag.ingles { border:1px solid #0ea5e9; color:#0ea5e9; }
+.tag.robotica { border:1px solid #9333ea; color:#9333ea; }
+
+/* ===== DESTAQUES ===== */
 .recommended {
-  border: 2px solid #22c55e;
+  border: 1px solid rgba(34,197,94,0.4);
 }
 
 .top-recommend {
-  border: 2px solid #f59e0b;
-  box-shadow: 0 8px 20px rgba(245,158,11,0.3);
+  border: 1px solid rgba(245,158,11,0.6);
+  box-shadow: 0 12px 30px rgba(245,158,11,0.15);
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer {
   text-align: center;
   padding: 30px;
   color: #777;
 }
+
 </style>
 </head>
 
@@ -170,21 +202,19 @@ body {
 
 <div class="container">
 
-<!-- INPUT IDADE -->
 <div class="filter">
   <input type="number" id="userAge" placeholder="Digite a idade">
   <button onclick="recommend()">Ver recomendações</button>
 </div>
 
-<!-- FILTRO -->
 <div class="filter">
   <select id="ageFilter" onchange="filterCards()">
     <option value="all">Todas</option>
-    <option value="10-12">10-12</option>
-    <option value="13-15">13-15</option>
+    <option value="10-12">10-12 anos</option>
+    <option value="13-15">13-15 anos</option>
   </select>
 
-  <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterCards()">
+  <input type="text" id="searchInput" placeholder="Buscar olimpíada..." onkeyup="filterCards()">
 </div>
 
 <div class="grid">
@@ -223,6 +253,30 @@ body {
   <span class="tag robotica">Robótica</span>
   <h3>OBR</h3>
   <p>Olimpíada Brasileira de Robótica</p>
+</div>
+
+<div class="card" data-age="10-12">
+  <span class="tag ciencias">Física</span>
+  <h3>OBF</h3>
+  <p>Olimpíada Brasileira de Física</p>
+</div>
+
+<div class="card" data-age="10-12">
+  <span class="tag ciencias">Ciências</span>
+  <h3>ONC</h3>
+  <p>Olimpíada Nacional de Ciências</p>
+</div>
+
+<div class="card" data-age="13-15">
+  <span class="tag linguagens">Português</span>
+  <h3>OP</h3>
+  <p>Olimpíada de Português</p>
+</div>
+
+<div class="card" data-age="13-15">
+  <span class="tag matematica">Matemática</span>
+  <h3>Copernicus</h3>
+  <p>Copernicus Math Olympiad</p>
 </div>
 
 </div>
