@@ -10,7 +10,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
   margin: 0;
   background: #f5f7fb;
-  color: #1a1a1a;
 }
 
 /* HERO */
@@ -19,11 +18,6 @@ body {
   color: white;
   padding: 50px 20px;
   text-align: center;
-}
-
-.logo {
-  max-width: 110px;
-  margin-bottom: 15px;
 }
 
 .hero-content {
@@ -40,21 +34,15 @@ body {
   object-fit: cover;
 }
 
-.hero h1 {
-  margin: 0;
-  font-size: 34px;
-}
-
-.hero p {
-  font-size: 16px;
+.logo {
+  max-width: 110px;
 }
 
 .mvp {
+  max-width: 650px;
+  margin: auto;
   margin-top: 20px;
   font-size: 14px;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 1.6;
 }
 
@@ -64,46 +52,40 @@ body {
 
 .cta input {
   padding: 10px;
-  width: 240px;
   border-radius: 6px;
   border: none;
 }
 
 .cta button {
-  padding: 10px 14px;
+  padding: 10px;
   background: #22c55e;
-  border: none;
   color: white;
+  border: none;
   border-radius: 6px;
-  margin-left: 8px;
-  cursor: pointer;
 }
 
 .lgpd {
-  margin-top: 10px;
   font-size: 12px;
-  color: #ddd;
+  margin-top: 10px;
 }
 
 /* CONTAINER */
 .container {
+  padding: 30px;
   max-width: 1100px;
   margin: auto;
-  padding: 30px 20px;
 }
 
 /* FILTRO */
 .filter {
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.filter select,
-.filter input {
+.filter input, .filter select {
   padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
   margin: 5px;
+  border-radius: 6px;
 }
 
 /* GRID */
@@ -118,62 +100,38 @@ body {
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  transition: 0.2s;
 }
 
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* TAGS */
+.tag { color: white; padding: 4px 8px; border-radius: 6px; font-size: 12px; }
+.matematica { background:#2563eb; }
+.ciencias { background:#16a34a; }
+.tecnologia { background:#7c3aed; }
+.linguagens { background:#ea580c; }
+.humanas { background:#dc2626; }
+.ingles { background:#0ea5e9; }
+.robotica { background:#9333ea; }
+
+/* DESTAQUES */
 .recommended {
   border: 2px solid #22c55e;
-  position: relative;
 }
 
-.recommended::before {
-  content: "⭐ Recomendado";
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #22c55e;
-  color: white;
-  font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 6px;
+.top-recommend {
+  border: 2px solid #f59e0b;
+  box-shadow: 0 8px 20px rgba(245,158,11,0.3);
 }
 
-.tag {
-  background: #2563eb;
-  color: white;
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-.title {
-  font-weight: bold;
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-.meta {
-  font-size: 14px;
-  margin-top: 8px;
-}
-
-.button {
-  margin-top: 10px;
-}
-
-.button button {
-  padding: 8px 12px;
-  border: none;
-  background: #2563eb;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 30px;
   color: #777;
-  font-size: 14px;
 }
 </style>
 </head>
@@ -181,6 +139,7 @@ body {
 <body>
 
 <div class="hero">
+  <div class="hero">
 
   <div class="hero-content">
     <img src="Caio.png" class="kid-img">
@@ -191,9 +150,9 @@ body {
   <p>Descubra as melhores olimpíadas científicas para você!</p>
 
   <div class="mvp">
-    🚀 Você está acessando antes do lançamento oficial.<br><br>
-    O <b>OlimpManager App</b> nasceu da iniciativa do Caio e da Clara, dois apaixonados pela conhecimento, que queriam organizar melhor as oportunidades de olimpíadas científicas.<br><br>
-    Este é um protótipo — e estamos construindo algo muito maior.<br><br>
+    🚀 Você está acessando este site na sua versão experimental, antes do lançamento oficial do nosso Aplicativo.<br><br>
+    O <b>OlimpManager App</b> nasceu da iniciativa dos irmãos Caio e Clara, dois apaixonados pela busca de conhecimento e pelo desejo de tornar mais acessíveis e organizadas as oportunidades de olimpíadas científicas.<br><br>
+    Este é ainda um protótipo — estamos construindo algo muito maior para vocês.<br><br>
     📈 Em breve: recomendações inteligentes e trilhas personalizadas. Insira seu e-mail para receber novidades em breve!
   </div>
 
@@ -201,9 +160,7 @@ body {
     <form action="https://formspree.io/f/xlgodlql" method="POST">
       <input type="email" name="email" placeholder="Seu e-mail" required>
       <button type="submit">Quero acompanhar</button>
-      <input type="text" name="_gotcha" style="display:none">
     </form>
-
     <div class="lgpd">
       Ao se cadastrar, você concorda em receber comunicações do OlimpManager App.
       Seus dados não serão compartilhados.
@@ -213,93 +170,66 @@ body {
 
 <div class="container">
 
+<!-- INPUT IDADE -->
+<div class="filter">
+  <input type="number" id="userAge" placeholder="Digite a idade">
+  <button onclick="recommend()">Ver recomendações</button>
+</div>
+
+<!-- FILTRO -->
 <div class="filter">
   <select id="ageFilter" onchange="filterCards()">
-    <option value="all">Todas as idades</option>
-    <option value="6-9">6 a 9 anos</option>
-    <option value="10-12">10 a 12 anos</option>
-    <option value="13-15">13 a 15 anos</option>
-    <option value="16+">16+ anos</option>
+    <option value="all">Todas</option>
+    <option value="10-12">10-12</option>
+    <option value="13-15">13-15</option>
   </select>
 
-  <input type="text" id="searchInput" placeholder="Buscar olimpíada..." onkeyup="filterCards()">
+  <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterCards()">
 </div>
 
 <div class="grid">
 
 <div class="card recommended" data-age="10-12">
-  <span class="tag">Matemática</span>
-  <div class="title">OBMEP</div>
-  <div class="meta">
-    Olimpíada Brasileira de Matemática das Escolas Públicas<br>
-    Prova: 09 Jun 2026<br>
-    2ª fase: 17 Out 2026
-  </div>
+  <span class="tag matematica">Matemática</span>
+  <h3>OBMEP</h3>
+  <p>Olimpíada Brasileira de Matemática</p>
 </div>
 
 <div class="card recommended" data-age="13-15">
-  <span class="tag">Tecnologia</span>
-  <div class="title">OBI</div>
-  <div class="meta">
-    Olimpíada Brasileira de Informática<br>
-    Fase 1: Maio/Junho<br>
-    Final: Setembro
-  </div>
+  <span class="tag tecnologia">Tecnologia</span>
+  <h3>OBI</h3>
+  <p>Olimpíada Brasileira de Informática</p>
 </div>
 
-<div class="card recommended" data-age="13-15">
-  <span class="tag">Ciências</span>
-  <div class="title">ONC</div>
-  <div class="meta">
-    Olimpíada Nacional de Ciências<br>
-    Fase 1: Agosto<br>
-    Fase 2: Setembro
-  </div>
+<div class="card" data-age="10-12">
+  <span class="tag ingles">Inglês</span>
+  <h3>OBLI</h3>
+  <p>Olimpíada Brasileira de Língua Inglesa</p>
 </div>
 
 <div class="card" data-age="13-15">
-  <span class="tag">Física</span>
-  <div class="title">OBF</div>
-  <div class="meta">
-    Olimpíada Brasileira de Física<br>
-    Fase 1: Agosto<br>
-    Fase 2: Outubro
-  </div>
+  <span class="tag matematica">Matemática</span>
+  <h3>OBM</h3>
+  <p>Olimpíada Brasileira de Matemática</p>
 </div>
 
 <div class="card" data-age="10-12">
-  <span class="tag">Robótica</span>
-  <div class="title">OBR</div>
-  <div class="meta">
-    Olimpíada Brasileira de Robótica<br>
-    Fase Teórica: Junho<br>
-    Fase Prática: Setembro
-  </div>
+  <span class="tag humanas">História</span>
+  <h3>ONHB</h3>
+  <p>Olimpíada Nacional em História do Brasil</p>
 </div>
 
 <div class="card" data-age="10-12">
-  <span class="tag">Robótica</span>
-  <div class="title">OBRL</div>
-  <div class="meta">
-    Olimpíada Brasileira de Robótica Livre<br>
-    Prova: Julho
-  </div>
-</div>
-
-<div class="card" data-age="10-12">
-  <span class="tag">Ciências</span>
-  <div class="title">Olimpíada do Oceano</div>
-  <div class="meta">
-    Olimpíada Brasileira do Oceano<br>
-    Prova: Outubro
-  </div>
+  <span class="tag robotica">Robótica</span>
+  <h3>OBR</h3>
+  <p>Olimpíada Brasileira de Robótica</p>
 </div>
 
 </div>
 </div>
 
 <div class="footer">
-  © 2026 OlimpManager App • MVP em evolução 🚀
+  © 2026 OlimpManager App 🚀
 </div>
 
 <script>
@@ -315,10 +245,24 @@ function filterCards() {
     let matchAge = (age === "all" || cardAge === age);
     let matchSearch = text.includes(search);
 
-    if (matchAge && matchSearch) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
+    card.style.display = (matchAge && matchSearch) ? "block" : "none";
+  });
+}
+
+function recommend() {
+  let age = parseInt(document.getElementById("userAge").value);
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    card.classList.remove("top-recommend");
+    let range = card.getAttribute("data-age");
+
+    if (range === "10-12" && age >= 10 && age <= 12) {
+      card.classList.add("top-recommend");
+    }
+
+    if (range === "13-15" && age >= 13 && age <= 15) {
+      card.classList.add("top-recommend");
     }
   });
 }
