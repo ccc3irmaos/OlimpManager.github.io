@@ -13,6 +13,7 @@ body {
   color: #1a1a1a;
 }
 
+/* HERO */
 .hero {
   background: linear-gradient(135deg, #0f172a, #2563eb);
   color: white;
@@ -29,7 +30,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .kid-img {
@@ -78,6 +79,13 @@ body {
   cursor: pointer;
 }
 
+.lgpd {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #ddd;
+}
+
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -90,10 +98,12 @@ body {
   text-align: center;
 }
 
-.filter select {
+.filter select,
+.filter input {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  margin: 5px;
 }
 
 /* GRID */
@@ -108,6 +118,23 @@ body {
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.recommended {
+  border: 2px solid #22c55e;
+  position: relative;
+}
+
+.recommended::before {
+  content: "⭐ Recomendado";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #22c55e;
+  color: white;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 
 .tag {
@@ -129,6 +156,19 @@ body {
   margin-top: 8px;
 }
 
+.button {
+  margin-top: 10px;
+}
+
+.button button {
+  padding: 8px 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .footer {
   text-align: center;
   padding: 30px;
@@ -148,16 +188,12 @@ body {
     <img src="Clara.png" class="kid-img">
   </div>
 
-  <p>Descubra as melhores olimpíadas científicas por idade</p>
+  <p>Descubra as melhores olimpíadas científicas para você!</p>
 
   <div class="mvp">
     🚀 Você está acessando antes do lançamento oficial.<br><br>
-
-    O <b>OlimpManager App</b> nasceu da iniciativa do Caio e da Clara, dois apaixonados pela conhecimento, 
-    que queriam organizar melhor as oportunidades de olimpíadas científicas.<br><br>
-
-    Este é um protótipo ainda — e estamos construindo algo muito maior.<br><br>
-
+    O <b>OlimpManager App</b> nasceu da iniciativa do Caio e da Clara, dois apaixonados pela conhecimento, que queriam organizar melhor as oportunidades de olimpíadas científicas.<br><br>
+    Este é um protótipo — e estamos construindo algo muito maior.<br><br>
     📈 Em breve: recomendações inteligentes e trilhas personalizadas. Insira seu e-mail para receber novidades em breve!
   </div>
 
@@ -167,12 +203,16 @@ body {
       <button type="submit">Quero acompanhar</button>
       <input type="text" name="_gotcha" style="display:none">
     </form>
+
+    <div class="lgpd">
+      Ao se cadastrar, você concorda em receber comunicações do OlimpManager App.
+      Seus dados não serão compartilhados.
+    </div>
   </div>
 </div>
 
 <div class="container">
 
-<!-- FILTRO -->
 <div class="filter">
   <select id="ageFilter" onchange="filterCards()">
     <option value="all">Todas as idades</option>
@@ -181,66 +221,77 @@ body {
     <option value="13-15">13 a 15 anos</option>
     <option value="16+">16+ anos</option>
   </select>
+
+  <input type="text" id="searchInput" placeholder="Buscar olimpíada..." onkeyup="filterCards()">
 </div>
 
-<div class="grid" id="grid">
+<div class="grid">
 
-<!-- CARDS -->
-
-<div class="card" data-age="10-12">
+<div class="card recommended" data-age="10-12">
   <span class="tag">Matemática</span>
   <div class="title">OBMEP</div>
   <div class="meta">
-    Idade: 10+<br>
+    Olimpíada Brasileira de Matemática das Escolas Públicas<br>
     Prova: 09 Jun 2026<br>
     2ª fase: 17 Out 2026
   </div>
 </div>
 
-<div class="card" data-age="10-12">
-  <span class="tag">Química</span>
-  <div class="title">OBQ Jr</div>
-  <div class="meta">
-    Idade: 11+<br>
-    Prova: Junho 2026 (previsto)
-  </div>
-</div>
-
-<div class="card" data-age="10-12">
-  <span class="tag">Matemática</span>
-  <div class="title">SASMO</div>
-  <div class="meta">
-    Idade: 8+<br>
-    Prova: Abril 2026
-  </div>
-</div>
-
-<div class="card" data-age="13-15">
-  <span class="tag">Ciências</span>
-  <div class="title">ONC</div>
-  <div class="meta">
-    Idade: 12+<br>
-    Fase 1: Agosto 2026<br>
-    Fase 2: Setembro 2026
-  </div>
-</div>
-
-<div class="card" data-age="13-15">
+<div class="card recommended" data-age="13-15">
   <span class="tag">Tecnologia</span>
   <div class="title">OBI</div>
   <div class="meta">
-    Idade: 12+<br>
+    Olimpíada Brasileira de Informática<br>
     Fase 1: Maio/Junho<br>
     Final: Setembro
   </div>
 </div>
 
-<div class="card" data-age="13-15">
-  <span class="tag">Matemática</span>
-  <div class="title">GJMAT</div>
+<div class="card recommended" data-age="13-15">
+  <span class="tag">Ciências</span>
+  <div class="title">ONC</div>
   <div class="meta">
-    Idade: 12+<br>
-    Prova: Setembro 2026
+    Olimpíada Nacional de Ciências<br>
+    Fase 1: Agosto<br>
+    Fase 2: Setembro
+  </div>
+</div>
+
+<div class="card" data-age="13-15">
+  <span class="tag">Física</span>
+  <div class="title">OBF</div>
+  <div class="meta">
+    Olimpíada Brasileira de Física<br>
+    Fase 1: Agosto<br>
+    Fase 2: Outubro
+  </div>
+</div>
+
+<div class="card" data-age="10-12">
+  <span class="tag">Robótica</span>
+  <div class="title">OBR</div>
+  <div class="meta">
+    Olimpíada Brasileira de Robótica<br>
+    Fase Teórica: Junho<br>
+    Fase Prática: Setembro
+  </div>
+</div>
+
+<div class="card" data-age="10-12">
+  <span class="tag">Robótica</span>
+  <div class="title">OBRL</div>
+  <div class="meta">
+    Olimpíada Brasileira de Robótica Livre<br>
+    Prova: Julho
+  </div>
+</div>
+
+<div class="card" data-age="10-12">
+  <span class="tag">Ciências</span>
+  <div class="title">Olimpíada do Oceano</div>
+  <div class="meta">
+    Olimpíada Brasileira do Oceano<br>
+    Prova: Outubro
   </div>
 </div>
 
@@ -253,13 +304,18 @@ body {
 
 <script>
 function filterCards() {
-  let selected = document.getElementById("ageFilter").value;
+  let age = document.getElementById("ageFilter").value;
+  let search = document.getElementById("searchInput").value.toLowerCase();
   let cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
-    let age = card.getAttribute("data-age");
+    let cardAge = card.getAttribute("data-age");
+    let text = card.innerText.toLowerCase();
 
-    if (selected === "all" || age === selected) {
+    let matchAge = (age === "all" || cardAge === age);
+    let matchSearch = text.includes(search);
+
+    if (matchAge && matchSearch) {
       card.style.display = "block";
     } else {
       card.style.display = "none";
